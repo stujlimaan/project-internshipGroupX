@@ -41,6 +41,8 @@ Endpoint: BASE_URL/functionup/colleges
 - Returns the list of all interns who have applied for internship at this college.
 - The response structure should look like this
 
+
+
 ### Testing
 - To test these apis create a new collection in Postman named Project 2 Internship
 - Each api should have a new request in this collection

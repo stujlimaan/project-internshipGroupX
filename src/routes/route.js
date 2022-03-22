@@ -10,3 +10,4 @@ router.get("/functionup/collegeDetails",College.getCollegeDetails)
 
 
 module.exports=router
+
