@@ -21,18 +21,14 @@ const InternSchema=new mongoose.Schema({
             isAsync:false
         }
     },
-    // mobile:{
-    //     type:Number,
-    //     required:"mobile is required",
-    //     unique:true,
-    //     match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/
-    // }
+    
 
     mobile: {
         type: String,
         validate: {
           validator: function(v) {
-            return /\d{3}-\d{3}-\d{4}/.test(v);
+            // return /\d{3}-\d{3}-\d{4}/.test(v);
+            return /\d{10}/.test(v);
           },
           message: props => `${props.value} is not a valid phone number!`
         },
@@ -47,3 +43,5 @@ const InternSchema=new mongoose.Schema({
           default:false
       }
 })
+
+module.exports=mongoose.model("Intern",InternSchema)
